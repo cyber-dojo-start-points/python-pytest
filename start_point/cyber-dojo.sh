@@ -23,9 +23,15 @@ trap cyber_dojo_exit EXIT SIGTERM
 # Can produde a lot of output on parameterized tests.
 export PYTEST_ADDOPTS="-v"
 
+# --------------------------------------------------------------
+# By default pytest captures stdout/stderr.
+# The --capture=tee-sys option ensures sys.stdout and
+# sys.stderr are actually written to.
+
 coverage3 run \
   --source=${CYBER_DOJO_SANDBOX} \
   --module pytest \
+  --capture=tee-sys \
     *test*.py
 
 # https://coverage.readthedocs.io/en/v4.5.x/index.html
