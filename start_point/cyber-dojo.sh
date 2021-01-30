@@ -32,6 +32,7 @@ coverage3 run \
   --source=${CYBER_DOJO_SANDBOX} \
   --module pytest \
   --capture=tee-sys \
+  --random-order-bucket=global \
     *test*.py
 
 # https://coverage.readthedocs.io/en/v4.5.x/index.html
