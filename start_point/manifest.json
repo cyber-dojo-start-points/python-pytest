@@ -1,5 +1,5 @@
 {
-  "display_name": "Python, pytest",
+  "display_name": "Python 3.12, Pytest 7.4",
   "image_name": "cyberdojofoundation/python_pytest:2b04bec",
   "visible_filenames": [
     "test_hiker.py",
