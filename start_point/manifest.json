@@ -1,6 +1,6 @@
 {
   "display_name": "Python 3.13, Pytest 8.3.4",
-  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:756400c",
+  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:855176f",
   "visible_filenames": [
     "test_hiker.py",
     "hiker.py",
