@@ -21,7 +21,7 @@ trap cyber_dojo_exit EXIT SIGTERM
 
 # --------------------------------------------------------------
 # Print a short summary of each test to stdout.
-# Can produde a lot of output on parameterized tests.
+# Can produce a lot of output on parameterized tests.
 export PYTEST_ADDOPTS="-v"
 
 echo MyPy
