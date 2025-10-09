@@ -6,10 +6,10 @@ They show examples of writing and testing
 Pick the style most suitable to your exercise.
 '''
 
-def global_answer():
+def global_answer() -> int:
     return 6 * 9
 
 class Hiker:
 
-    def instance_answer(self):
+    def instance_answer(self: Hiker) -> int:
         return global_answer()
