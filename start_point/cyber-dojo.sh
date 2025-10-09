@@ -32,6 +32,7 @@ mypy *.py | tee ${REPORT_DIR}/mypy.txt || true
 # The --capture=tee-sys option ensures sys.stdout and
 # sys.stderr are actually written to.
 
+echo
 coverage3 run \
   --source=${CYBER_DOJO_SANDBOX} \
   --module pytest \
