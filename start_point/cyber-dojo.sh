@@ -44,7 +44,7 @@ coverage3 run \
 
 coverage3 report \
   --show-missing \
-    > ${REPORT_DIR}/coverage.txt
+  | tee ${REPORT_DIR}/coverage.txt
 
 # http://pycodestyle.pycqa.org/en/latest/intro.html#configuration
 
