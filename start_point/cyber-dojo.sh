@@ -12,7 +12,8 @@ function cyber_dojo_enter()
 function cyber_dojo_exit()
 {
   # 2. Remove text files we don't want returned.
-  cyber_dojo_delete_dirs .pytest_cache # ...
+  cyber_dojo_delete_dirs .pytest_cache
+  cyber_dojo_delete_dirs .mypy_cache
   #cyber_dojo_delete_files ...
 }
 cyber_dojo_enter
@@ -22,6 +23,9 @@ trap cyber_dojo_exit EXIT SIGTERM
 # Print a short summary of each test to stdout.
 # Can produde a lot of output on parameterized tests.
 export PYTEST_ADDOPTS="-v"
+
+echo MyPy
+mypy *.py | tee ${REPORT_DIR}/mypy.txt || true
 
 # --------------------------------------------------------------
 # By default pytest captures stdout/stderr.
