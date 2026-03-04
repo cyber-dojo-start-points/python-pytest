@@ -1,11 +1,12 @@
 {
   "display_name": "Python 3.14.3, pytest 9.0.2",
-  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:199138f",
+  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:4833cf7",
   "visible_filenames": [
     "test_hiker.py",
     "hiker.py",
     "cyber-dojo.sh"
   ],
+  "rag_lambda": "red_amber_green.rb",
   "filename_extension": [
     ".py"
   ],
