@@ -5,18 +5,11 @@ on:
     branches:
       - main
 
-env:
-  PACKAGES_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PACKAGES_USERNAME: ${{ github.actor }}
-  REPO_NAME: ${{ github.event.repository.name }}
-
 jobs:
-
-  build-publish-test:
+  red_amber_green_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: cyber-dojo-start-points/pinned-checkout@main
 
       - name: Build Language-Start-Point image, test it
         run: ./run_tests.sh
