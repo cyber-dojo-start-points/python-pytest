@@ -33,7 +33,7 @@ mypy *.py | tee ${REPORT_DIR}/mypy.txt || true
 # sys.stderr are actually written to.
 
 echo
-coverage3 run \
+coverage run \
   --source=${CYBER_DOJO_SANDBOX} \
   --module pytest \
   --capture=tee-sys \
@@ -42,7 +42,7 @@ coverage3 run \
 
 # https://coverage.readthedocs.io/en/latest
 echo
-coverage3 report \
+coverage report \
   --show-missing \
   | tee ${REPORT_DIR}/coverage.txt
 
