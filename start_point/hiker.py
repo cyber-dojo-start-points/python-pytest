@@ -11,5 +11,5 @@ def global_answer() -> int:
 
 class Hiker:
 
-    def instance_answer(self: Hiker) -> int:
+    def instance_answer(self) -> int:
         return global_answer()

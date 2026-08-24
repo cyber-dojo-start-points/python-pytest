@@ -14,6 +14,7 @@ function cyber_dojo_exit()
   # 2. Remove text files we don't want returned.
   cyber_dojo_delete_dirs .pytest_cache
   cyber_dojo_delete_dirs .mypy_cache
+  cyber_dojo_delete_dirs __pycache__
   #cyber_dojo_delete_files ...
 }
 cyber_dojo_enter
@@ -24,13 +25,27 @@ trap cyber_dojo_exit EXIT SIGTERM
 # Can produce a lot of output on parameterized tests.
 export PYTEST_ADDOPTS="-v"
 
+# --------------------------------------------------------------
+# Every .py file is compiled, at any depth, including files nothing
+# imports yet. A file you are halfway through writing is reported
+# here instead of being quietly ignored. Nothing below runs until
+# every file parses.
+echo Compile
+python3 -m compileall -q ${CYBER_DOJO_SANDBOX}
+
+echo
 echo MyPy
-mypy *.py | tee ${REPORT_DIR}/mypy.txt || true
+mypy $(find ${CYBER_DOJO_SANDBOX} -name '*.py') | tee ${REPORT_DIR}/mypy.txt || true
 
 # --------------------------------------------------------------
 # By default pytest captures stdout/stderr.
 # The --capture=tee-sys option ensures sys.stdout and
 # sys.stderr are actually written to.
+#
+# pytest is handed the whole directory, so it finds your tests at any
+# depth. It recognizes a file as a test file when its name starts with
+# test_ or ends with _test, so a test in a file named anything else
+# will not run.
 
 echo
 coverage run \
@@ -38,7 +53,7 @@ coverage run \
   --module pytest \
   --capture=tee-sys \
   --random-order-bucket=global \
-    *test*.py
+    ${CYBER_DOJO_SANDBOX}
 
 # https://coverage.readthedocs.io/en/latest
 echo
