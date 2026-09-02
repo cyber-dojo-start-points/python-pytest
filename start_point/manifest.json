@@ -8,7 +8,7 @@
     "pytest",
     "9.1"
   ],
-  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:e8d7fcd",
+  "image_name": "ghcr.io/cyber-dojo-languages/python_pytest:9fe6f32",
   "visible_filenames": [
     "test_hiker.py",
     "hiker.py",
