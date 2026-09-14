@@ -1,0 +1,7 @@
+{
+  "match_counts": {
+    "^test_hiker\\.py:[0-9]+: NameError$": 1,
+    "AssertionError": 0,
+    "^=+ 1 failed in ": 1
+  }
+}

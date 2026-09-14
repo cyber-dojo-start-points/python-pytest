@@ -1,0 +1,9 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 3 items$": 1,
+    " PASSED +\\[ *[0-9]+%\\]$": 3,
+    "^=+ 3 passed in ": 1,
+    "^TOTAL +[0-9]+ +0 +100%$": 1
+  }
+}

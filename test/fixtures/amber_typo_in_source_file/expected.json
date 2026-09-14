@@ -1,0 +1,8 @@
+{
+  "max_output_lines": 50,
+  "match_counts": {
+    "^hiker\\.py:[0-9]+: error: ": 1,
+    "^hiker\\.py:[0-9]+: NameError$": 1,
+    "AssertionError": 0
+  }
+}

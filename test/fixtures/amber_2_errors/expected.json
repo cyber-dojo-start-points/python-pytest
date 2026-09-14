@@ -1,0 +1,8 @@
+{
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 2 items$": 1,
+    "^hiker\\.py:[0-9]+: ZeroDivisionError$": 2,
+    "AssertionError": 0,
+    "^=+ 2 failed in ": 1
+  }
+}

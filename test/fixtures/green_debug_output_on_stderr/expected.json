@@ -1,0 +1,8 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    "^answer was called$": 1,
+    " PASSED +\\[ *[0-9]+%\\]$": 1,
+    "^=+ 1 passed in ": 1
+  }
+}

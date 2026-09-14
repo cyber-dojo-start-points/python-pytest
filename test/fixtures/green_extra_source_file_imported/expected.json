@@ -1,0 +1,9 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    " PASSED +\\[ *[0-9]+%\\]$": 1,
+    "^=+ 1 passed in ": 1,
+    "^checksum\\.py +[0-9]+ +0 +100%$": 1,
+    "^TOTAL +[0-9]+ +0 +100%$": 1
+  }
+}

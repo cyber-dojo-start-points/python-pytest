@@ -1,0 +1,8 @@
+{
+  "match_counts": {
+    "\\*\\*\\* Error compiling .*/hiker_tests\\.py": 1,
+    "^SyntaxError: ": 1,
+    "^MyPy$": 0,
+    " passed in ": 0
+  }
+}

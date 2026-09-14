@@ -1,0 +1,9 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    "^test_fizz_buzz\\.py::.* PASSED ": 1,
+    "^fizz_buzz\\.py +[0-9]+ +0 +100%$": 1,
+    "^=+ 1 passed in ": 1,
+    "hiker": 0
+  }
+}

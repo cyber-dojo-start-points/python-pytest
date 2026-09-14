@@ -1,0 +1,9 @@
+{
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 2 items$": 1,
+    "^test_hiker\\.py::.* PASSED ": 1,
+    "^test_answer_size\\.py::.* FAILED ": 1,
+    "^test_answer_size\\.py:[0-9]+: AssertionError$": 1,
+    "^=+ 1 failed, 1 passed in ": 1
+  }
+}

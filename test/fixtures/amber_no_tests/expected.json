@@ -1,0 +1,7 @@
+{
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 0 items$": 1,
+    "^=+ no tests ran in ": 1,
+    " PASSED +\\[ *[0-9]+%\\]$": 0
+  }
+}

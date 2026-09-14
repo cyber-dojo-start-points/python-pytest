@@ -1,0 +1,10 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 1 item$": 1,
+    " PASSED +\\[ *[0-9]+%\\]$": 1,
+    "^=+ 1 passed in ": 1,
+    "^hiker_tests\\.py +[0-9]+ +[0-9]+ +0%": 1,
+    "three_digits": 0
+  }
+}

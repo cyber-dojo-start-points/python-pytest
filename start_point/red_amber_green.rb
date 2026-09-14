@@ -29,5 +29,10 @@ lambda { |stdout,stderr,status|
   end
 
   return :green if /(\d+) passed/.match(output)
-  return :red
+
+  # Output holding none of the above says nothing about the tests. It is what
+  # a run looks like when it died before printing a summary, or printed so
+  # much that the summary fell outside what reaches here. Red would claim a
+  # test ran and disagreed with the code, which is more than is known.
+  return :amber
 }

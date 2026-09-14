@@ -1,0 +1,9 @@
+{
+  "max_output_lines": 70,
+  "match_counts": {
+    "^collecting \\.\\.\\. collected 2 items$": 1,
+    "^sums/test_answer_size\\.py::.* PASSED ": 1,
+    "^sums/test_answer_size\\.py +[0-9]+ +0 +100%$": 1,
+    "^=+ 2 passed in ": 1
+  }
+}

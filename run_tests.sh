@@ -25,4 +25,7 @@ red_amber_green_test()
   fi
 }
 
-"$(red_amber_green_test)" "${1:-${MY_DIR}}"
+# Every argument is passed straight through, so --lights-only, --matrix-only
+# and -h all work here. This repo is the one checked unless an argument names
+# another.
+"$(red_amber_green_test)" "${MY_DIR}" "$@"
