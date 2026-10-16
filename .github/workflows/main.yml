@@ -6,10 +6,9 @@ on:
       - main
 
 jobs:
-  red_amber_green_test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: cyber-dojo-start-points/pinned-checkout@main
-
-      - name: Build Language-Start-Point image, test it
-        run: ./run_tests.sh
+  red-amber-green:
+    uses: cyber-dojo-start-points/shared-scripts/.github/workflows/red-amber-green.yml@main
+    permissions:
+      contents: read
+      # The called workflow opens an issue when a propagated commit fails.
+      issues: write
